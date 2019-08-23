@@ -1,7 +1,7 @@
 // @flow
 import * as React from 'react';
 import IconButton from '../UI/IconButton';
-import Add from 'material-ui/svg-icons/content/add';
+import Add from '@material-ui/icons/Add';
 import Brush from 'material-ui/svg-icons/image/brush';
 import {
   type ResourceSource,

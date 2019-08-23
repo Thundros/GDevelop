@@ -1,7 +1,7 @@
 // @flow
 import React, { Component } from 'react';
 import IconButton from '../IconButton';
-import FilterList from 'material-ui/svg-icons/content/filter-list';
+import FilterList from '@material-ui/icons/FilterList';
 import IconMenu from '../Menu/IconMenu';
 
 const styles = {
@@ -22,7 +22,7 @@ export default class TagsButton extends Component<Props, {||}> {
       <IconMenu
         iconButtonElement={
           <IconButton style={styles.container}>
-            <FilterList color="white" />
+            <FilterList htmlColor="white" />
           </IconButton>
         }
         buildMenuTemplate={this.props.buildMenuTemplate}

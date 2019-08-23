@@ -34,7 +34,7 @@ type DialogState = {|
 const styles = {
   icon: { width: 40, height: 40, marginRight: 20 },
   iconText: { flex: 1 },
-  thanksText: { textAlign: 'right', marginRight: 20, marginBottom: 0 },
+  thanksText: { marginRight: 20, marginBottom: 0 },
 };
 
 export class SubscriptionCheckDialog extends React.Component<
@@ -145,7 +145,7 @@ export class SubscriptionCheckDialog extends React.Component<
               </Trans>
             </Text>
           </Line>
-          <Text style={styles.thanksText}>
+          <Text style={styles.thanksText} align="right">
             <b>
               <Trans>Thanks!</Trans>
             </b>

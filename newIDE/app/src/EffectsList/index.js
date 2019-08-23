@@ -15,7 +15,7 @@ import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert';
 import SemiControlledTextField from '../UI/SemiControlledTextField';
 import MiniToolbar from '../UI/MiniToolbar';
 import newNameGenerator from '../Utils/NewNameGenerator';
-import Add from 'material-ui/svg-icons/content/add';
+import Add from '@material-ui/icons/Add';
 import {
   getAllEffectDescriptions,
   type EffectDescription,

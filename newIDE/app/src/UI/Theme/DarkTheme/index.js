@@ -1,6 +1,7 @@
 // @flow
 import { type Theme } from '../DefaultTheme';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import { createMuiTheme, darken, lighten } from '@material-ui/core/styles';
 import './Mosaic.css';
 import './EventsSheet.css';
 import 'react-virtualized/styles.css'; // Styles for react-virtualized Table
@@ -25,7 +26,7 @@ const backgroundColor = '#252525';
  */
 const canvasColor = '#303030';
 
-const theme: Theme = {
+const v0Theme = {
   fontFamily: '-apple-system, BlinkMacSystemFont, sans-serif', //OS X font
   palette: {
     primary1Color: blue,
@@ -120,4 +121,45 @@ const theme: Theme = {
   gdevelopIconsCSSFilter: '',
 };
 
-export default getMuiTheme(theme);
+const muiTheme = createMuiTheme({
+  palette: {
+    common: { black: 'rgba(110, 42, 42, 1)', white: '#fff' },
+    background: {
+      paper: canvasColor,
+      default: backgroundColor,
+    },
+    primary: {
+      light: lighten(blue, 0.05),
+      main: blue,
+      dark: darken(blue, 0.05),
+      contrastText: '#fff',
+    },
+    secondary: {
+      light: lighten(almostWhite, 0.05),
+      main: almostWhite,
+      dark: darken(almostWhite, 0.05),
+      contrastText: '#000',
+    },
+    // Check the default values for these:
+    // error: {
+    //   light: '#e57373',
+    //   main: '#f44336',
+    //   dark: '#d32f2f',
+    //   contrastText: '#fff',
+    // },
+    text: {
+      primary: lightWhite,
+      secondary: notSoWhite,
+      disabled: '#888888',
+      hint: notSoWhite,
+    },
+  },
+});
+
+
+const theme: Theme = {
+  muiV0Theme: getMuiTheme(v0Theme),
+  muiTheme,
+};
+
+export default theme;

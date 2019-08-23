@@ -29,6 +29,8 @@
     "@blueprintjs/core": "file:src/Utils/BlueprintJsPlaceholder",
     "@blueprintjs/icons": "file:src/Utils/BlueprintJsPlaceholder",
     "@lingui/react": "git://github.com/4ian/lingui-react.git#master",
+    "@material-ui/core": "^4.3.2",
+    "@material-ui/icons": "^4.2.1",
     "algoliasearch": "^3.30.0",
     "aws-sdk": "^2.100.0",
     "axios": "^0.16.1",

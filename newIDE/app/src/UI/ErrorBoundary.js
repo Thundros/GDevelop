@@ -3,7 +3,7 @@ import { Trans } from '@lingui/macro';
 
 import * as React from 'react';
 import ReactErrorBoundary from 'react-error-boundary';
-import BugReport from 'material-ui/svg-icons/action/bug-report';
+import BugReport from '@material-ui/icons/BugReport';
 import PlaceholderMessage from './PlaceholderMessage';
 import Divider from 'material-ui/Divider';
 import RaisedButton from './RaisedButton';
@@ -19,12 +19,6 @@ const errorHandler = (error: Error, componentStack: string) => {
   });
 };
 
-const styles = {
-  title: {
-    fontSize: 24,
-  },
-};
-
 export const ErrorFallbackComponent = ({
   componentStack,
   error,
@@ -33,8 +27,8 @@ export const ErrorFallbackComponent = ({
   error: Error,
 }) => (
   <PlaceholderMessage>
-    <Text style={styles.title}>
-      <BugReport /> This editor encountered a problem.
+    <Text size="title">
+      <BugReport fontSize="large" /> This editor encountered a problem.
     </Text>
     <Divider />
     <Text>

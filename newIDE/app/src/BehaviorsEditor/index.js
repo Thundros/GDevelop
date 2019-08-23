@@ -1,7 +1,7 @@
 import { Trans } from '@lingui/macro';
 import React, { Component } from 'react';
 import TextField from '../UI/TextField';
-import Add from 'material-ui/svg-icons/content/add';
+import Add from '@material-ui/icons/Add';
 import Delete from 'material-ui/svg-icons/action/delete';
 import IconButton from '../UI/IconButton';
 import EmptyMessage from '../UI/EmptyMessage';

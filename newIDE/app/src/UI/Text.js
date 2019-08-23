@@ -1,12 +1,12 @@
 // @flow
 import * as React from 'react';
+import Typography from '@material-ui/core/Typography';
 
 type Props = {|
   children: ?React.Node,
+  size?: 'body' | 'title',
+  align?: 'inherit' | 'left' | 'center' | 'right' | 'justify',
   style?: {|
-    // Allow a larger text for titles
-    fontSize?: 24,
-
     // Margins
     marginLeft?: number,
     marginRight?: number,
@@ -18,16 +18,22 @@ type Props = {|
 
     // Allow to show the text inline
     display?: 'inline-block',
-
-    // Right align
-    textAlign?: 'right',
-
-    // Styling
-    opacity?: 0.8,
   |},
 |};
 
 // A Text to be displayed in the app. Prefer using this
 // than a `<p>`/`<span>` or `<div>` as this will help to maintain
 // consistency of text in the whole app.
-export default ({ children, style }: Props) => <p style={style}>{children}</p>;
+export default ({ children, style, size, align }: Props) => (
+  <Typography
+    variant={size === 'title' ? 'h4' : 'body1'}
+    style={{
+      ...style,
+      marginTop: 6 + ((style && style.marginTop) || 0),
+      marginBottom: 6 + ((style && style.marginBottom) || 0),
+    }}
+    align={align || 'inherit'}
+  >
+    {children}
+  </Typography>
+);

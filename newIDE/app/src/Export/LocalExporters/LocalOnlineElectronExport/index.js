@@ -33,6 +33,7 @@ import BuildsWatcher from '../../Builds/BuildsWatcher';
 import BuildStepsProgress, {
   type BuildStep,
 } from '../../Builds/BuildStepsProgress';
+import Text from '../../../UI/Text';
 const path = optionalRequire('path');
 const os = optionalRequire('os');
 const electron = optionalRequire('electron');
@@ -286,9 +287,11 @@ class LocalOnlineElectronExport extends Component<Props, State> {
         {(userProfile: UserProfile) => (
           <Column noMargin>
             <Line>
-              {t(
-                'Your game will be exported and packaged online as an stand-alone game for Windows, Linux and/or macOS.'
-              )}
+              <Text>
+                {t(
+                  'Your game will be exported and packaged online as an stand-alone game for Windows, Linux and/or macOS.'
+                )}
+              </Text>
             </Line>
             <Checkbox
               label={<Trans>Windows (zip file)</Trans>}

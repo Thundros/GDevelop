@@ -16,10 +16,6 @@ const styles = {
     maxHeight: 300,
     overflowY: 'scroll',
   },
-  poweredByText: {
-    textAlign: 'right',
-    opacity: 0.8,
-  },
 };
 
 type Props = {|
@@ -170,7 +166,7 @@ export default class DocSearchArea extends React.Component<Props, State> {
             </Column>
           </React.Fragment>
         )}
-        <Text style={styles.poweredByText}>
+        <Text align="right">
           This search is powered by{' '}
           <FlatButton
             onClick={() => Window.openExternalURL('http://algolia.com/')}

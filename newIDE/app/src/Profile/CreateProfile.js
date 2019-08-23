@@ -27,7 +27,7 @@ export default ({ message, onLogin }: Props) => (
           'You are not connected. Create an account and connect to access to GDevelop online services, like building your game for Android in one click!'}
       </Text>
     </Line>
-    <Line justifyContent="center" alignItems="center">
+    <Line justifyContent="center" alignItems="baseline">
       <RaisedButton
         label={<Trans>Create my account</Trans>}
         onClick={onLogin}

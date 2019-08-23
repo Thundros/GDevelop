@@ -4,7 +4,7 @@ import { Trans } from '@lingui/macro';
 import React, { Component } from 'react';
 import { SortableContainer, SortableElement } from 'react-sortable-hoc';
 import { mapFor } from '../../../Utils/MapFor';
-import Add from 'material-ui/svg-icons/content/add';
+import Add from '@material-ui/icons/Add';
 import DirectionTools from './DirectionTools';
 import MiniToolbar from '../../../UI/MiniToolbar';
 import ImageThumbnail, {

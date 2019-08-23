@@ -37,18 +37,6 @@ import {
 } from '../../UI/Reponsive/ReponsiveWidthMeasurer';
 const gd = global.gd;
 
-const styles = {
-  dialogContent: {
-    width: 'calc(100% - 16px)',
-    maxWidth: 'none',
-  },
-  dialogBody: {
-    padding: 0,
-    display: 'flex',
-    flexDirection: 'row',
-  },
-};
-
 type StepName =
   | 'object-or-free-instructions'
   | 'object-instructions'
@@ -397,8 +385,9 @@ export default class NewInstructionEditorDialog extends React.Component<
             ]}
             open={open}
             onRequestClose={onCancel}
-            contentStyle={styles.dialogContent}
-            bodyStyle={styles.dialogBody}
+            maxWidth={false}
+            noMargin
+            flexRowBody
           >
             <SelectColumns
               columnsRenderer={{

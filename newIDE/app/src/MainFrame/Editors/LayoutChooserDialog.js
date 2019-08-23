@@ -59,7 +59,8 @@ export default class LayoutChooserDialog extends Component {
         title={this.props.title}
         onRequestClose={this.props.onClose}
         autoScrollBodyContent={true}
-        contentStyle={{ width: '350px' }}
+        fullWidth
+        maxWidth="sm"
       >
         {this.props.helpText && <Text>{this.props.helpText}</Text>}
         <RadioButtonGroup

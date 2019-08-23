@@ -1,5 +1,6 @@
 // @flow
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import { createMuiTheme, darken, lighten } from '@material-ui/core/styles';
 import './Mosaic.css';
 import './EventsSheet.css';
 import 'react-virtualized/styles.css'; // Styles for react-virtualized Table
@@ -22,7 +23,7 @@ const backgroundColor = '#f7f7f7';
  */
 const canvasColor = '#f0f0f0';
 
-const theme = {
+const v0Theme = {
   fontFamily: '-apple-system, BlinkMacSystemFont, sans-serif', //OS X font
   palette: {
     primary1Color: gdevelopLightBlue,
@@ -106,5 +107,44 @@ const theme = {
   gdevelopIconsCSSFilter: '',
 };
 
+const muiTheme = createMuiTheme({
+  palette: {
+    common: { black: 'rgba(110, 42, 42, 1)', white: '#fff' },
+    background: {
+      paper: canvasColor,
+      default: backgroundColor,
+    },
+    primary: {
+      light: lighten(gdevelopLightBlue, 0.05),
+      main: gdevelopLightBlue,
+      dark: darken(gdevelopLightBlue, 0.05),
+      contrastText: '#fff',
+    },
+    secondary: {
+      light: lighten(gdevelopPurple, 0.05),
+      main: gdevelopPurple,
+      dark: darken(gdevelopPurple, 0.05),
+      contrastText: '#fff',
+    },
+    // Check the default values for these:
+    // error: {
+    //   light: '#e57373',
+    //   main: '#f44336',
+    //   dark: '#d32f2f',
+    //   contrastText: '#fff',
+    // },
+    // text: {
+    //   primary: 'rgba(0, 0, 0, 0.87)',
+    //   secondary: 'rgba(0, 0, 0, 0.54)',
+    //   disabled: 'rgba(0, 0, 0, 0.38)',
+    //   hint: 'rgba(0, 0, 0, 0.38)',
+    // },
+  },
+});
+
+const theme = {
+  muiV0Theme: getMuiTheme(v0Theme),
+  muiTheme,
+};
 export type Theme = $Exact<typeof theme>;
-export default getMuiTheme(theme);
+export default theme;

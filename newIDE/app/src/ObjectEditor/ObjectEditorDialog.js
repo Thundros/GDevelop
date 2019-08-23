@@ -12,12 +12,6 @@ import { withSerializableObject } from '../Utils/SerializableObjectEditorContain
 import { Column, Line } from '../UI/Grid';
 import SemiControlledTextField from '../UI/SemiControlledTextField';
 
-const styles = {
-  titleContainer: {
-    padding: 0,
-  },
-};
-
 type StateType = {|
   currentTab: string,
   newObjectName: string,
@@ -70,6 +64,7 @@ export class ObjectEditorDialog extends Component<*, StateType> {
         modal
         onRequestClose={this.props.onCancel}
         open={this.props.open}
+        noTitleMargin
         title={
           <div>
             <Tabs value={currentTab} onChange={this._onChangeTab}>
@@ -86,7 +81,6 @@ export class ObjectEditorDialog extends Component<*, StateType> {
             </Tabs>
           </div>
         }
-        titleStyle={styles.titleContainer}
       >
         <Line alignItems="baseline">
           <Column>Object Name:</Column>

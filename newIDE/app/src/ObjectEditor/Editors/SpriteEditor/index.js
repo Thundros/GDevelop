@@ -4,7 +4,7 @@ import { Trans } from '@lingui/macro';
 import * as React from 'react';
 import { SortableContainer, SortableElement } from 'react-sortable-hoc';
 import SpritesList from './SpritesList';
-import Add from 'material-ui/svg-icons/content/add';
+import Add from '@material-ui/icons/Add';
 import Delete from 'material-ui/svg-icons/action/delete';
 import IconButton from '../../../UI/IconButton';
 import FlatButton from '../../../UI/FlatButton';

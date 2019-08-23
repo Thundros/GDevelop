@@ -21,7 +21,7 @@ import ObjectTypeSelector from '../../ObjectTypeSelector';
 import BehaviorTypeSelector from '../../BehaviorTypeSelector';
 import { isBehaviorLifecycleFunction } from '../../EventsFunctionsExtensionsLoader/MetadataDeclarationHelpers';
 import { getParametersIndexOffset } from '../../EventsFunctionsExtensionsLoader';
-import Add from 'material-ui/svg-icons/content/add';
+import Add from '@material-ui/icons/Add';
 
 const gd = global.gd;
 

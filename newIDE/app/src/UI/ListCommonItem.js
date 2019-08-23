@@ -1,6 +1,6 @@
 import React from 'react';
 import IconButton from './IconButton';
-import Add from 'material-ui/svg-icons/content/add';
+import Add from '@material-ui/icons/Add';
 import Search from 'material-ui/svg-icons/action/search';
 import EmptyMessage from './EmptyMessage';
 // No i18n in this file
